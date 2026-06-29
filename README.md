@@ -125,10 +125,13 @@ CNAME  www  womanintech-spec.github.io
 
 ## Contacts
 
-| Rôle | Contact |
+| Rôle | Nom |
 |---|---|
-| Co-présidentes | Vanessa Portois Wermter · Caroline Ramade |
-| Ops & secrétariat | Elise Rabiot |
-| Plaidoyer & tech | Barbara Teslar |
+| Co-présidente | Vanessa Portois Wermter |
+| Co-présidente | Caroline Ramade |
+| Trésorière | Sarah Jarsallé |
+| Secrétaire générale · Ops | Elise Rabiot |
+| Secrétaire adjointe · Plaidoyer & tech | Barbara Teslar |
+| Secrétaire adjointe · Members | Ségolène Chauvet |
 | Email | nowomennotech@gmail.com |
 | HelloAsso | [Adhésion 2026](https://www.helloasso.com/associations/no-women-no-tech/adhesions/adhesion-nwnt-2026) |
