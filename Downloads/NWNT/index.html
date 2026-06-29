@@ -4,15 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>No Women No Tech · Bordeaux</title>
-  <meta name="description" content="Une communauté de femmes dans la tech à Bordeaux — 250+ membres, 40+ événements, 3 ans d'impact. Smart · Bold · Kind.">
+  <meta name="description" content="Une communauté de femmes dans la tech à Bordeaux — 225+ membres, 40+ événements, 4 ans d'impact. Smart · Bold · Kind.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ════════════════════════════════════════════════════════
-       DESIGN TOKENS
-    ════════════════════════════════════════════════════════ */
     :root {
       --nuit:    #000C22;
       --nuit-2:  #071433;
@@ -27,9 +24,6 @@
       --grad:    linear-gradient(135deg, var(--bleu), var(--mauve), var(--violet), var(--rose));
     }
 
-    /* ════════════════════════════════════════════════════════
-       RESET & BASE
-    ════════════════════════════════════════════════════════ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -42,9 +36,6 @@
     img { display: block; max-width: 100%; }
     a   { color: inherit; text-decoration: none; }
 
-    /* ════════════════════════════════════════════════════════
-       UTILITIES
-    ════════════════════════════════════════════════════════ */
     .grad-text {
       background: var(--grad);
       -webkit-background-clip: text;
@@ -70,16 +61,10 @@
       color: var(--ink-dim);
     }
     .dot { width: .45rem; height: .45rem; border-radius: 50%; flex-shrink: 0; }
-    .orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(90px);
-      pointer-events: none;
-    }
+    .orb { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; }
     section { position: relative; overflow: hidden; padding: 5.5rem 1.5rem; }
     .container { max-width: 1100px; margin: 0 auto; }
 
-    /* Section headers */
     .section-header { text-align: center; margin-bottom: 3.5rem; }
     .section-header h2 {
       font-family: 'Unbounded', sans-serif;
@@ -91,7 +76,6 @@
     }
     .section-header p { color: var(--ink-dim); font-size: 1rem; }
 
-    /* Buttons */
     .btn-primary {
       display: inline-flex; align-items: center; gap: .4rem;
       padding: .75rem 1.75rem;
@@ -111,9 +95,7 @@
     }
     .btn-outline:hover { border-color: var(--bleu); color: var(--ink); }
 
-    /* ════════════════════════════════════════════════════════
-       NAV
-    ════════════════════════════════════════════════════════ */
+    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 1.1rem 2rem;
@@ -137,9 +119,7 @@
     .nav-cta:hover { opacity: .88; }
     @media (max-width: 640px) { .nav-links { display: none; } }
 
-    /* ════════════════════════════════════════════════════════
-       HERO
-    ════════════════════════════════════════════════════════ */
+    /* HERO */
     #hero {
       min-height: 100svh;
       display: flex; align-items: center;
@@ -192,9 +172,7 @@
     .hero-badge .stat span { font-size: .7rem; color: var(--ink-dim); }
     .hero-badge .sep { width: 1px; height: 2rem; background: var(--line); flex-shrink: 0; }
 
-    /* ════════════════════════════════════════════════════════
-       3-YEAR TIMELINE / KPIs
-    ════════════════════════════════════════════════════════ */
+    /* TIMELINE */
     #timeline { background: var(--nuit-2); }
     .timeline-grid {
       display: grid;
@@ -207,7 +185,6 @@
     .timeline-col {
       padding: 2rem 1.75rem;
       border-right: 1px solid var(--line);
-      position: relative;
     }
     .timeline-col:last-child { border-right: none; }
     .timeline-col .year {
@@ -229,10 +206,7 @@
       line-height: 1.15;
       margin-bottom: .9rem;
     }
-    .timeline-col ul {
-      list-style: none;
-      display: flex; flex-direction: column; gap: .6rem;
-    }
+    .timeline-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
     .timeline-col li {
       font-size: .88rem; color: var(--ink-dim);
       line-height: 1.45;
@@ -240,7 +214,6 @@
     }
     .timeline-col li::before { content: '→'; flex-shrink: 0; color: var(--ink-mute); }
 
-    /* Big KPI band */
     .kpi-band {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -266,9 +239,7 @@
     }
     .kpi-item span { font-size: .8rem; color: var(--ink-dim); }
 
-    /* ════════════════════════════════════════════════════════
-       EVENTS SECTION
-    ════════════════════════════════════════════════════════ */
+    /* EVENTS */
     #events { background: var(--nuit); }
     .events-layout {
       display: grid;
@@ -310,9 +281,7 @@
     .mosaic-cell:hover img { transform: scale(1.06); }
     .mosaic-cell.tall { grid-row: span 2; }
 
-    /* ════════════════════════════════════════════════════════
-       PARTNERSHIPS
-    ════════════════════════════════════════════════════════ */
+    /* PARTNERS */
     #partners {
       background: linear-gradient(180deg, var(--nuit) 0%, #050B1F 100%);
       border-top: 1px solid var(--line);
@@ -339,20 +308,8 @@
       font-size: .95rem; font-weight: 600; margin-bottom: .5rem;
     }
     .partner-card p { font-size: .83rem; color: var(--ink-dim); line-height: 1.45; }
-    .partner-placeholder {
-      border: 1px dashed rgba(244,242,255,.2);
-      border-radius: .875rem;
-      padding: 1.5rem;
-      display: flex; align-items: center; justify-content: center;
-      text-align: center;
-      color: var(--ink-mute);
-      font-size: .82rem;
-      font-style: italic;
-    }
 
-    /* ════════════════════════════════════════════════════════
-       SUMMER PARTY EVENT
-    ════════════════════════════════════════════════════════ */
+    /* SUMMER PARTY */
     #event {
       background: linear-gradient(160deg, rgba(149,99,246,.2) 0%, rgba(201,102,231,.14) 100%);
       border-top: 1px solid var(--line);
@@ -413,9 +370,7 @@
       line-height: 1; letter-spacing: -.03em;
     }
 
-    /* ════════════════════════════════════════════════════════
-       TESTIMONIALS (Airtable-powered)
-    ════════════════════════════════════════════════════════ */
+    /* TESTIMONIALS */
     #testimonials { background: var(--nuit-2); }
     .testimonials-grid {
       display: grid;
@@ -434,8 +389,7 @@
     .quote-mark { font-family: 'Unbounded', sans-serif; font-size: 2.5rem; line-height: 1; color: var(--violet); }
     .testimonial-card .quote-text {
       font-size: .92rem; color: var(--ink-dim); line-height: 1.65;
-      flex: 1;
-      font-style: italic;
+      flex: 1; font-style: italic;
     }
     .testimonial-card .author {
       display: flex; align-items: center; gap: .75rem;
@@ -453,14 +407,9 @@
     .author-avatar img { width: 100%; height: 100%; object-fit: cover; }
     .author-name { font-size: .85rem; font-weight: 600; }
     .author-role { font-size: .76rem; color: var(--ink-mute); }
-
-    /* Loading / error states */
     .testimonials-loading, .testimonials-error {
       text-align: center; padding: 3rem; color: var(--ink-mute); font-size: .9rem;
     }
-    .testimonials-error a { color: var(--bleu); text-decoration: underline; }
-
-    /* Airtable setup notice */
     .airtable-notice {
       text-align: center;
       margin-top: 1.5rem;
@@ -478,9 +427,23 @@
       color: var(--bleu);
     }
 
-    /* ════════════════════════════════════════════════════════
-       BOARD
-    ════════════════════════════════════════════════════════ */
+    /* VALUES */
+    #values { background: linear-gradient(180deg, #050B1F 0%, var(--nuit) 100%); }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .value-card {
+      border: 1px solid var(--line);
+      border-radius: 1rem; padding: 2rem 1.75rem;
+      background: rgba(255,255,255,.02);
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .value-word {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 700; font-size: 1.75rem; line-height: 1;
+    }
+    .value-card hr { border: none; border-top: 1px solid var(--line); }
+    .value-card p { font-size: .88rem; color: var(--ink-dim); line-height: 1.55; }
+
+    /* BOARD */
     #board { background: var(--nuit); }
     .board-grid {
       display: grid;
@@ -502,7 +465,6 @@
     }
     .board-card .name { font-family: 'Unbounded', sans-serif; font-size: .92rem; font-weight: 600; margin-bottom: .3rem; }
     .board-card .bio { font-size: .8rem; color: var(--ink-dim); line-height: 1.45; }
-    /* Role colors per card */
     .board-card:nth-child(1) .role { color: var(--bleu); }
     .board-card:nth-child(2) .role { color: var(--rose); }
     .board-card:nth-child(3) .role { color: var(--mauve); }
@@ -510,27 +472,7 @@
     .board-card:nth-child(5) .role { color: var(--bleu); }
     .board-card:nth-child(6) .role { color: var(--mauve); }
 
-    /* ════════════════════════════════════════════════════════
-       VALUES
-    ════════════════════════════════════════════════════════ */
-    #values { background: linear-gradient(180deg, #050B1F 0%, var(--nuit) 100%); }
-    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-    .value-card {
-      border: 1px solid var(--line);
-      border-radius: 1rem; padding: 2rem 1.75rem;
-      background: rgba(255,255,255,.02);
-      display: flex; flex-direction: column; gap: 1rem;
-    }
-    .value-word {
-      font-family: 'Unbounded', sans-serif;
-      font-weight: 700; font-size: 1.75rem; line-height: 1;
-    }
-    .value-card hr { border: none; border-top: 1px solid var(--line); }
-    .value-card p { font-size: .88rem; color: var(--ink-dim); line-height: 1.55; }
-
-    /* ════════════════════════════════════════════════════════
-       JOIN
-    ════════════════════════════════════════════════════════ */
+    /* JOIN */
     #join { text-align: center; }
     #join h2 {
       font-family: 'Unbounded', sans-serif;
@@ -540,7 +482,7 @@
     }
     #join > .container > p {
       font-size: 1rem; color: var(--ink-dim);
-      max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.55;
+      max-width: 560px; margin: 0 auto 2.5rem; line-height: 1.55;
     }
     .pricing-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
     .price-card {
@@ -554,9 +496,43 @@
     }
     .price-card .label { font-size: .78rem; color: var(--ink-dim); margin-top: .4rem; }
 
-    /* ════════════════════════════════════════════════════════
-       FOOTER
-    ════════════════════════════════════════════════════════ */
+    /* PRESS */
+    #press { background: var(--nuit-2); border-top: 1px solid var(--line); }
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .press-card {
+      border: 1px solid var(--line);
+      border-radius: .875rem;
+      padding: 1.35rem 1.5rem;
+      background: rgba(255,255,255,.02);
+      display: flex; flex-direction: column; gap: .6rem;
+      transition: border-color .25s;
+    }
+    .press-card:hover { border-color: rgba(60,160,238,.4); }
+    .press-card .press-source {
+      font-size: .7rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--bleu);
+    }
+    .press-card h4 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: .88rem; font-weight: 600; line-height: 1.3;
+    }
+    .press-card .press-date { font-size: .75rem; color: var(--ink-mute); }
+    .press-placeholder {
+      border: 1px dashed rgba(244,242,255,.18);
+      border-radius: .875rem;
+      padding: 1.35rem;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      color: var(--ink-mute);
+      font-size: .8rem;
+      font-style: italic;
+    }
+
+    /* FOOTER */
     footer {
       border-top: 1px solid var(--line);
       padding: 2.5rem 1.5rem;
@@ -568,15 +544,18 @@
     footer .logo { height: 30px; margin: 0 auto 1rem; }
     footer span.heart { color: var(--rose); }
 
-    /* ════════════════════════════════════════════════════════
-       RESPONSIVE
-    ════════════════════════════════════════════════════════ */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .timeline-grid { grid-template-columns: 1fr; }
+      .timeline-col { border-right: none; border-bottom: 1px solid var(--line); }
+      .timeline-col:last-child { border-bottom: none; }
       .kpi-band { grid-template-columns: repeat(2, 1fr); }
-      .kpi-item { border-bottom: 1px solid var(--line); }
-      .kpi-item:nth-child(3), .kpi-item:nth-child(4) { border-bottom: none; }
+      .kpi-item:nth-child(1),
+      .kpi-item:nth-child(2) { border-bottom: 1px solid var(--line); }
+      .kpi-item:nth-child(2),
+      .kpi-item:nth-child(4) { border-right: none; }
       .partners-grid { grid-template-columns: repeat(2, 1fr); }
+      .press-grid { grid-template-columns: repeat(2, 1fr); }
       .testimonials-grid { grid-template-columns: 1fr 1fr; }
       .board-grid { grid-template-columns: repeat(2, 1fr); }
       .values-grid { grid-template-columns: 1fr; }
@@ -588,78 +567,67 @@
       #hero h1, #hero .tagline { text-align: center; }
       #event .event-visual { order: -1; }
       nav img { height: 28px; }
-      .events-mosaic { display: none; } /* hide on mobile */
+      .events-mosaic { display: none; }
     }
     @media (max-width: 540px) {
       .testimonials-grid { grid-template-columns: 1fr; }
       .board-grid { grid-template-columns: 1fr; }
       .partners-grid { grid-template-columns: 1fr; }
+      .press-grid { grid-template-columns: 1fr; }
       .kpi-band { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════════════════
-  ⚙️  AIRTABLE CONFIG — remplis ces 3 valeurs pour activer
-      les témoignages en temps réel.
-
-  1. Va sur airtable.com → ton compte → API key (read-only)
-  2. Ouvre ta base → l'URL contient le BASE_ID (app…)
-  3. Nom de la table contenant les témoignages
-
-  Structure attendue de la table :
-    • Prénom    (Single line text)
-    • Rôle      (Single line text)
-    • Entreprise(Single line text)
-    • Texte     (Long text) ← le témoignage
-    • Afficher  (Checkbox)  ← cocher = affiché sur le site
-    • Photo     (Attachment, optionnel)
-══════════════════════════════════════════════════════════ -->
+<!-- AIRTABLE CONFIG ─────────────────────────────────────────
+  Remplis ces valeurs pour activer les témoignages en live.
+  Structure attendue de la table "Témoignages" :
+    • Prénom     (Single line text)
+    • Rôle       (Single line text)
+    • Entreprise (Single line text)
+    • Texte      (Long text)
+    • Afficher   (Checkbox) ← cocher = publié
+    • Photo      (Attachment, optionnel)
+─────────────────────────────────────────────────────────── -->
 <script>
-  const AIRTABLE_API_KEY  = '';           // 'patXXXXXXXXXXXXXX'
-  const AIRTABLE_BASE_ID  = '';           // 'appXXXXXXXXXXXXXX'
-  const AIRTABLE_TABLE    = 'Témoignages';
+  const AIRTABLE_API_KEY = '';  // 'patXXXXXXXXXXXXXX'
+  const AIRTABLE_BASE_ID = '';  // 'appXXXXXXXXXXXXXX'
+  const AIRTABLE_TABLE   = 'Témoignages';
 </script>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  NAVIGATION
-══════════════════════════════════════════════════════════ -->
+<!-- NAVIGATION -->
 <nav>
   <img src="./NWNT Bordeaux — Deck Membres & Partenaires 2026_files/nwnt-logo-outline.png" alt="NWNT Bordeaux">
   <div class="nav-links">
-    <a href="#timeline">3 ans</a>
+    <a href="#timeline">4 ans</a>
     <a href="#event">Summer Party</a>
     <a href="#testimonials">Témoignages</a>
     <a href="#join">Adhérer</a>
   </div>
-  <a href="https://www.helloasso.com/associations/no-women-no-tech/adhesions"
+  <a href="https://www.helloasso.com/associations/no-women-no-tech/adhesions/adhesion-nwnt-2026"
      class="nav-cta" target="_blank" rel="noopener">Rejoindre →</a>
 </nav>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  HERO
-══════════════════════════════════════════════════════════ -->
+<!-- HERO -->
 <section id="hero">
   <div class="orb" style="width:700px;height:700px;background:var(--violet);opacity:.14;top:-200px;right:-200px;"></div>
   <div class="orb" style="width:450px;height:450px;background:var(--bleu);opacity:.11;bottom:-100px;left:-120px;"></div>
 
   <div class="container">
     <div>
-      <p class="eyebrow" style="margin-bottom:.9rem;">Bordeaux · Association 2026</p>
+      <p class="eyebrow" style="margin-bottom:.9rem;">Bordeaux · 2022 — 2026</p>
       <h1>No Women<br><span class="grad-text">No Tech</span></h1>
       <p class="tagline">
-        Une communauté. Une association. Une nouvelle étape.<br>
-        Des femmes de la tech qui s'élèvent ensemble — professionnellement, collectivement, structurellement.
+        Une communauté. Une association.<br>
+        Des femmes de la tech qui s'élèvent ensemble : professionnellement, collectivement, structurellement.
       </p>
       <div class="hero-chips">
         <span class="chip">Smart</span>
         <span class="chip">Bold</span>
         <span class="chip">Kind</span>
-        <span class="chip">Give First</span>
-        <span class="chip">Sororité</span>
       </div>
       <div class="hero-actions">
         <a href="#event" class="btn-primary">🌸 Summer Party 2026</a>
@@ -671,32 +639,29 @@
       <img src="./NWNT Bordeaux — Deck Membres & Partenaires 2026_files/board-2026.jpg"
            alt="Le board NWNT Bordeaux 2026">
       <div class="hero-badge">
-        <div class="stat"><strong>250+</strong><span>membres</span></div>
+        <div class="stat"><strong>225+</strong><span>membres</span></div>
         <div class="sep"></div>
         <div class="stat"><strong>40+</strong><span>événements</span></div>
         <div class="sep"></div>
-        <div class="stat"><strong>3</strong><span>ans</span></div>
+        <div class="stat"><strong>4</strong><span>ans</span></div>
         <div class="sep"></div>
-        <div class="stat"><strong>2026</strong><span>structurée</span></div>
+        <div class="stat"><strong>2026</strong><span>naissance de l'asso</span></div>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  3 ANS D'IMPACT — TIMELINE & KPIs
-══════════════════════════════════════════════════════════ -->
+<!-- 4 ANS D'IMPACT — TIMELINE & KPIs -->
 <section id="timeline">
   <div class="orb" style="width:600px;height:600px;background:var(--mauve);opacity:.13;top:0;right:-100px;"></div>
   <div class="container">
     <div class="section-header">
       <p class="eyebrow">2022 → 2026</p>
-      <h2>3 ans d'impact <span class="grad-text">mesurable.</span></h2>
-      <p>De 12 femmes autour d'un dîner à une association structurée de 250+ membres.</p>
+      <h2>4 ans d'impact <span class="grad-text">mesurable.</span></h2>
+      <p>De 12 femmes autour d'un dîner à une association structurée de 225+ membres.</p>
     </div>
 
-    <!-- Timeline -->
     <div class="timeline-grid">
       <div class="timeline-col">
         <span class="year">2022 — 2023</span>
@@ -710,33 +675,32 @@
         </ul>
       </div>
       <div class="timeline-col">
-        <span class="year">2024</span>
+        <span class="year">2024 — 2025</span>
         <h3>L'accélération</h3>
         <ul>
-          <li>Cap des 100 puis 175 membres actives</li>
+          <li>Cap des 100 membres puis 225 profils documentés</li>
           <li>Diversification des formats : panels, tables rondes, meetups</li>
           <li>Premiers partenariats avec l'écosystème tech bordelais</li>
-          <li>Annuaire Airtable avec 175 profils documentés</li>
-          <li>Participation French Tech Bordeaux</li>
+          <li>Premier événement avec la French Tech Bordeaux</li>
+          <li>Annuaire communautaire lancé en mars 2025</li>
         </ul>
       </div>
       <div class="timeline-col">
-        <span class="year">2025 — 2026</span>
+        <span class="year">2026</span>
         <h3>La structure</h3>
         <ul>
-          <li>250+ membres dans la communauté</li>
           <li>40+ événements organisés depuis la création</li>
           <li>Association loi 1901 créée le <strong style="color:var(--ink)">09/03/2026</strong></li>
           <li>Bureau de 6 membres constitué</li>
-          <li>Nouveau groupe WhatsApp réservé aux cotisantes</li>
+          <li>Groupe WhatsApp et outils dédiés aux cotisantes</li>
+          <li>Plaidoyer structuré sur les enjeux des femmes dans la tech</li>
         </ul>
       </div>
     </div>
 
-    <!-- KPI band -->
     <div class="kpi-band">
       <div class="kpi-item">
-        <strong class="grad-text">250+</strong>
+        <strong class="grad-text">225+</strong>
         <span>membres de la communauté</span>
       </div>
       <div class="kpi-item">
@@ -744,8 +708,8 @@
         <span>événements organisés</span>
       </div>
       <div class="kpi-item">
-        <strong style="color:var(--violet)">175</strong>
-        <span>profils dans l'annuaire</span>
+        <strong style="color:var(--violet)">4</strong>
+        <span>ans d'existence</span>
       </div>
       <div class="kpi-item">
         <strong style="color:var(--rose)">100%</strong>
@@ -756,24 +720,22 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  ÉVÉNEMENTS
-══════════════════════════════════════════════════════════ -->
+<!-- ÉVÉNEMENTS -->
 <section id="events">
   <div class="orb" style="width:500px;height:500px;background:var(--bleu);opacity:.11;bottom:-100px;left:-100px;"></div>
   <div class="container">
     <div class="section-header">
       <p class="eyebrow">Formats</p>
-      <h2>Une communauté qui <span class="grad-text">se rassemble.</span></h2>
-      <p>Dîners, tables rondes, panels, meetups — 40+ événements depuis 2023.</p>
+      <h2>Une communauté qui <span class="grad-text">rassemble.</span></h2>
+      <p>40+ événements depuis 2022 — pour progresser ensemble, au concret.</p>
     </div>
     <div class="events-layout">
       <div class="event-types">
         <div class="event-type-card">
-          <div class="event-icon" style="background:rgba(60,160,238,.15);">🍽️</div>
+          <div class="event-icon" style="background:rgba(60,160,238,.15);">📣</div>
           <div class="info">
-            <h4>Dîners fondateurs</h4>
-            <p>Le format d'origine — petits groupes, échanges libres, relations profondes.</p>
+            <h4>Plaidoyer & représentation</h4>
+            <p>Porter une voix collective sur les enjeux des femmes dans la tech — positions documentées, alliances locales et nationales.</p>
           </div>
         </div>
         <div class="event-type-card">
@@ -784,24 +746,38 @@
           </div>
         </div>
         <div class="event-type-card">
-          <div class="event-icon" style="background:rgba(149,99,246,.15);">🔁</div>
-          <div class="info">
-            <h4>Co-développement</h4>
-            <p>Ateliers structurés pour travailler ensemble sur des situations réelles.</p>
-          </div>
-        </div>
-        <div class="event-type-card">
-          <div class="event-icon" style="background:rgba(201,102,231,.15);">🤝</div>
+          <div class="event-icon" style="background:rgba(149,99,246,.15);">🤝</div>
           <div class="info">
             <h4>Meetups partenaires</h4>
-            <p>En co-organisation avec French Tech Bordeaux, entreprises tech locales et autres.</p>
+            <p>En co-organisation avec des organisations, associations, écoles et entreprises de l'écosystème.</p>
           </div>
         </div>
         <div class="event-type-card">
-          <div class="event-icon" style="background:rgba(60,160,238,.12);">🎉</div>
+          <div class="event-icon" style="background:rgba(201,102,231,.15);">🎉</div>
           <div class="info">
-            <h4>Événements signature</h4>
-            <p>Summer Party, soirées annuelles — des moments de célébration collective.</p>
+            <h4>Événements spéciaux</h4>
+            <p>Summer Party, soirées annuelles — des moments de célébration et de connexion collective.</p>
+          </div>
+        </div>
+        <div class="event-type-card">
+          <div class="event-icon" style="background:rgba(60,160,238,.12);">🔁</div>
+          <div class="info">
+            <h4>Ateliers de co-développement</h4>
+            <p>Travailler ensemble sur des situations réelles, en intelligence collective.</p>
+          </div>
+        </div>
+        <div class="event-type-card">
+          <div class="event-icon" style="background:rgba(92,124,236,.12);">🌱</div>
+          <div class="info">
+            <h4>Mentorat & marrainages</h4>
+            <p>Des relations de confiance qui s'inscrivent dans la durée.</p>
+          </div>
+        </div>
+        <div class="event-type-card">
+          <div class="event-icon" style="background:rgba(149,99,246,.12);">🍽️</div>
+          <div class="info">
+            <h4>Dîners & déjeuners thématiques</h4>
+            <p>Le format d'origine — petits groupes, échanges libres, relations profondes.</p>
           </div>
         </div>
       </div>
@@ -821,38 +797,47 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  PARTENARIATS
-  ➜ Ajoute / modifie les cartes ci-dessous avec tes vrais partenaires
-══════════════════════════════════════════════════════════ -->
+<!-- PARTENARIATS -->
 <section id="partners">
   <div class="orb" style="width:500px;height:500px;background:var(--violet);opacity:.13;top:0;right:-100px;"></div>
   <div class="container">
     <div class="section-header">
       <p class="eyebrow">Écosystème</p>
-      <h2>Nos <span class="grad-text">partenariats.</span></h2>
+      <h2>Nos <span class="grad-text">partenaires.</span></h2>
       <p>NWNT s'inscrit dans l'écosystème tech bordelais et au-delà.</p>
     </div>
     <div class="partners-grid">
       <div class="partner-card">
         <p class="partner-type">Écosystème tech</p>
         <h4>French Tech Bordeaux</h4>
-        <p>Co-organisation d'événements, participation aux initiatives "Mixité dans les boards" (fév. 2026).</p>
+        <p>Premier événement organisé ensemble en 2024 — alliance naturelle pour porter la mixité dans la tech.</p>
       </div>
-      <!-- ➜ Duplique ce bloc pour chaque partenaire -->
-      <div class="partner-placeholder">+ Ajouter un partenaire</div>
-      <div class="partner-placeholder">+ Ajouter un partenaire</div>
-      <div class="partner-placeholder">+ Ajouter un partenaire</div>
-      <div class="partner-placeholder">+ Ajouter un partenaire</div>
-      <div class="partner-placeholder">+ Ajouter un partenaire</div>
+      <div class="partner-card">
+        <p class="partner-type">Formation</p>
+        <h4>Le Wagon</h4>
+        <p>Partenaire formation pour accompagner les reconversions et montées en compétences tech.</p>
+      </div>
+      <div class="partner-card">
+        <p class="partner-type">Impact & RSE</p>
+        <h4>Climate House</h4>
+        <p>Convergence autour des enjeux tech & transition — un écosystème bordelais engagé.</p>
+      </div>
+      <div class="partner-card">
+        <p class="partner-type">Diversité</p>
+        <h4>Women in STEM</h4>
+        <p>Collaboration sur la promotion des carrières scientifiques et techniques au féminin.</p>
+      </div>
+      <div class="partner-card">
+        <p class="partner-type">Emploi</p>
+        <h4>France Travail</h4>
+        <p>Soutien aux membres en transition professionnelle et accès aux dispositifs d'accompagnement.</p>
+      </div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  SUMMER PARTY
-══════════════════════════════════════════════════════════ -->
+<!-- SUMMER PARTY -->
 <section id="event">
   <div class="orb" style="width:600px;height:600px;background:var(--violet);opacity:.18;top:-100px;left:-200px;"></div>
   <div class="container">
@@ -860,7 +845,7 @@
       <div class="event-pill"><div class="pulse"></div> Prochain événement</div>
       <h2>NWNT<br><span class="grad-text">Summer Party</span><br>2026 ☀️</h2>
       <p class="event-desc">
-        Le grand rendez-vous estival de la communauté. Un moment de connexion, de célébration et de légèreté — entre femmes de la tech de Bordeaux, au Yesterday Club.
+        Le grand rendez-vous estival de la communauté. Un moment de connexion, de célébration et de légèreté entre femmes de la tech de Bordeaux, au Now Co-working.
       </p>
       <div class="event-links">
         <a href="https://www.helloasso.com/associations/no-women-no-tech/evenements/nwnt-summer-party"
@@ -869,7 +854,7 @@
         </a>
         <a href="https://yesterday.club/event/nwnt-summer-party"
            class="event-btn event-btn-outline" target="_blank" rel="noopener">
-          📍 Yesterday Club
+          📍 Now Co-working
         </a>
       </div>
     </div>
@@ -879,7 +864,7 @@
         <p class="eyebrow">No Women No Tech · Bordeaux</p>
         <div class="big grad-text">Summer<br>Party 2026</div>
         <div style="display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-top:.5rem;">
-          <span class="chip">Yesterday Club</span>
+          <span class="chip">Now Co-working</span>
           <span class="chip">Bordeaux</span>
           <span class="chip">Été 2026</span>
         </div>
@@ -889,18 +874,14 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  TÉMOIGNAGES — chargés depuis Airtable
-══════════════════════════════════════════════════════════ -->
+<!-- TÉMOIGNAGES -->
 <section id="testimonials">
   <div class="orb" style="width:600px;height:600px;background:var(--rose);opacity:.12;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
   <div class="container">
     <div class="section-header">
       <p class="eyebrow">Elles en parlent</p>
-      <h2>Ce que la communauté <span class="grad-text">dit.</span></h2>
-      <p>Des paroles collectées par Caroline auprès des membres.</p>
+      <h2>L'expérience vue par notre communauté : <span class="grad-text">des retours qui comptent.</span></h2>
     </div>
-
     <div id="testimonials-container">
       <div class="testimonials-loading">Chargement des témoignages…</div>
     </div>
@@ -908,9 +889,7 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  VALEURS
-══════════════════════════════════════════════════════════ -->
+<!-- VALEURS -->
 <section id="values">
   <div class="container">
     <div class="section-header">
@@ -939,16 +918,14 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  BOARD
-══════════════════════════════════════════════════════════ -->
+<!-- BUREAU -->
 <section id="board" style="background:var(--nuit-2);">
   <div class="orb" style="width:500px;height:500px;background:var(--mauve);opacity:.12;bottom:-100px;right:-100px;"></div>
   <div class="container">
     <div class="section-header">
       <p class="eyebrow">Le bureau 2026</p>
-      <h2>L'équipe qui <span class="grad-text">propulse.</span></h2>
-      <p>Les 6 membres du bureau de l'association, constituée le 09/03/2026.</p>
+      <h2>À la rencontre de <span class="grad-text">notre bureau.</span></h2>
+      <p>Le collectif qui porte notre mission.</p>
     </div>
     <div class="board-grid">
       <div class="board-card">
@@ -956,7 +933,7 @@
         <div class="card-body">
           <p class="role">Co-présidente</p>
           <p class="name">Vanessa Portois Wermter</p>
-          <p class="bio">Tech B2B marketing/comms · Fondatrice About Impact · TEDx Bordeaux · Climate Reality Leader 2025</p>
+          <p class="bio">Tech B2B · Marketing/comms · RSE · Communauté · Fondatrice About Impact</p>
         </div>
       </div>
       <div class="board-card">
@@ -972,7 +949,7 @@
         <div class="card-body">
           <p class="role">Trésorière</p>
           <p class="name">Sarah Jarsallé</p>
-          <p class="bio">CEO Les Petits Papiers</p>
+          <p class="bio">CEO Mes petits papiers</p>
         </div>
       </div>
       <div class="board-card">
@@ -996,7 +973,7 @@
         <div class="card-body">
           <p class="role">Secrétaire adjointe · Members</p>
           <p class="name">Ségolène Chauvet</p>
-          <p class="bio">Head of Customer Success freelance</p>
+          <p class="bio">Consultante en Stratégie Customer Experience</p>
         </div>
       </div>
     </div>
@@ -1004,15 +981,13 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  ADHÉSION
-══════════════════════════════════════════════════════════ -->
+<!-- ADHÉSION -->
 <section id="join">
   <div class="orb" style="width:700px;height:700px;background:var(--violet);opacity:.18;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
   <div class="container" style="position:relative;z-index:2;">
     <p class="eyebrow" style="text-align:center;margin-bottom:.5rem;">Cotisation 2026</p>
-    <h2>Rejoins<br><span class="grad-text">la communauté.</span></h2>
-    <p>Accès au groupe WhatsApp cotisantes, à l'annuaire Airtable, aux événements et à la mémoire collective Notion. Transparence totale sur l'usage des fonds.</p>
+    <h2><span class="grad-text">Rejoins-nous !</span></h2>
+    <p>Votre adhésion vous ouvre les portes d'une communauté engagée : échangez avec les membres, participez à nos événements, accédez à notre annuaire et à nos ressources collaboratives. Votre contribution soutient concrètement nos actions, avec une transparence totale sur leur financement.</p>
     <div class="pricing-row">
       <div class="price-card">
         <div class="amount" style="color:var(--bleu)">80€</div>
@@ -1028,63 +1003,71 @@
       </div>
     </div>
     <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
-      <a href="https://www.helloasso.com/associations/no-women-no-tech/adhesions"
+      <a href="https://www.helloasso.com/associations/no-women-no-tech/adhesions/adhesion-nwnt-2026"
          class="btn-primary" target="_blank" rel="noopener">Adhérer via HelloAsso →</a>
-      <a href="#board" class="btn-outline">Contacter le bureau</a>
+      <a href="mailto:nowomennotech@gmail.com" class="btn-outline">Nous contacter</a>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  FOOTER
-══════════════════════════════════════════════════════════ -->
+<!-- MÉDIA & PRESSE -->
+<section id="press">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Média & Presse</p>
+      <h2>Elles parlent <span class="grad-text">de nous.</span></h2>
+      <p>Retrouvez nos apparitions dans la presse et les médias.</p>
+    </div>
+    <div class="press-grid">
+      <div class="press-placeholder">Article à venir</div>
+      <div class="press-placeholder">Article à venir</div>
+      <div class="press-placeholder">Article à venir</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
 <footer>
   <img class="logo"
        src="./NWNT Bordeaux — Deck Membres & Partenaires 2026_files/nwnt-logo-outline.png"
        alt="NWNT">
-  <p>No Women No Tech Bordeaux · Association loi 1901 · Statuts signés le 09/03/2026</p>
+  <p>No Women No Tech · Association loi 1901 · RNA : xxx</p>
   <p style="margin-top:.4rem;">
     Made with <span class="heart">♥</span> — Smart · Bold · Kind
   </p>
 </footer>
 
 
-<!-- ══════════════════════════════════════════════════════════
-  AIRTABLE TESTIMONIALS SCRIPT
-  Charge les témoignages depuis Airtable si la clé est configurée,
-  sinon affiche des placeholders.
-══════════════════════════════════════════════════════════ -->
+<!-- AIRTABLE SCRIPT -->
 <script>
-  /* ── Placeholder testimonials (fallback) ── */
   const PLACEHOLDER_TESTIMONIALS = [
     {
       prenom: "Membre NWNT",
       role: "Développeuse",
-      entreprise: "Bordeaux Tech",
-      texte: "Témoignage à venir — Caroline collecte les paroles des membres actuellement. Reviens bientôt !"
+      entreprise: "Bordeaux",
+      texte: "Les témoignages arrivent bientôt. Revenez dans quelques jours !"
     },
     {
       prenom: "Membre NWNT",
       role: "Product Manager",
-      entreprise: "Scale-up bordelaise",
-      texte: "Témoignage à venir — Caroline collecte les paroles des membres actuellement. Reviens bientôt !"
+      entreprise: "Bordeaux",
+      texte: "Les témoignages arrivent bientôt. Revenez dans quelques jours !"
     },
     {
       prenom: "Membre NWNT",
       role: "Data Scientist",
-      entreprise: "Grand groupe",
-      texte: "Témoignage à venir — Caroline collecte les paroles des membres actuellement. Reviens bientôt !"
+      entreprise: "Bordeaux",
+      texte: "Les témoignages arrivent bientôt. Revenez dans quelques jours !"
     }
   ];
 
-  /* ── Render a single card ── */
   function renderCard(t) {
     const initials = (t.prenom || '?').charAt(0).toUpperCase();
     const avatarHTML = t.photoUrl
       ? `<div class="author-avatar"><img src="${t.photoUrl}" alt="${t.prenom}"></div>`
       : `<div class="author-avatar">${initials}</div>`;
-
     return `
       <div class="testimonial-card">
         <div class="quote-mark">"</div>
@@ -1099,7 +1082,6 @@
       </div>`;
   }
 
-  /* ── Render grid ── */
   function renderGrid(items, isPlaceholder) {
     const container = document.getElementById('testimonials-container');
     container.innerHTML = `
@@ -1108,35 +1090,25 @@
       </div>
       ${isPlaceholder ? `
       <div class="airtable-notice">
-        Pour afficher les vrais témoignages : renseigne <code>AIRTABLE_API_KEY</code> et <code>AIRTABLE_BASE_ID</code>
-        dans le bloc config en haut du fichier HTML.
+        Pour afficher les témoignages : renseigne <code>AIRTABLE_API_KEY</code> et <code>AIRTABLE_BASE_ID</code> en haut du fichier.
       </div>` : ''}`;
   }
 
-  /* ── Fetch from Airtable ── */
   async function loadTestimonials() {
     if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
       renderGrid(PLACEHOLDER_TESTIMONIALS, true);
       return;
     }
-
     const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE)}`
-      + `?filterByFormula={Afficher}=TRUE()&maxRecords=9&sort[0][field]=Prénom&sort[0][direction]=asc`;
-
+      + `?filterByFormula={Afficher}=TRUE()&maxRecords=9&sort[0][field]=Pr%C3%A9nom&sort[0][direction]=asc`;
     try {
-      const res = await fetch(url, {
-        headers: { Authorization: `Bearer ${AIRTABLE_API_KEY}` }
-      });
-
+      const res = await fetch(url, { headers: { Authorization: `Bearer ${AIRTABLE_API_KEY}` } });
       if (!res.ok) throw new Error(`Airtable ${res.status}`);
-
       const data = await res.json();
-
       if (!data.records || data.records.length === 0) {
         renderGrid(PLACEHOLDER_TESTIMONIALS, false);
         return;
       }
-
       const items = data.records.map(r => ({
         prenom:     r.fields['Prénom']     || '',
         role:       r.fields['Rôle']       || '',
@@ -1144,14 +1116,10 @@
         texte:      r.fields['Texte']      || '',
         photoUrl:   r.fields['Photo']?.[0]?.url || null
       }));
-
       renderGrid(items, false);
     } catch (err) {
-      document.getElementById('testimonials-container').innerHTML = `
-        <div class="testimonials-error">
-          Impossible de charger les témoignages depuis Airtable.<br>
-          <small>${err.message}</small>
-        </div>`;
+      document.getElementById('testimonials-container').innerHTML =
+        `<div class="testimonials-error">Impossible de charger les témoignages.<br><small>${err.message}</small></div>`;
       console.error('Airtable error:', err);
     }
   }
