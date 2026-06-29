@@ -509,18 +509,23 @@
       padding: 1.35rem 1.5rem;
       background: rgba(255,255,255,.02);
       display: flex; flex-direction: column; gap: .6rem;
-      transition: border-color .25s;
+      transition: border-color .25s, transform .2s;
+      text-decoration: none;
     }
-    .press-card:hover { border-color: rgba(60,160,238,.4); }
+    .press-card:hover { border-color: rgba(60,160,238,.4); transform: translateY(-2px); }
     .press-card .press-source {
       font-size: .7rem; font-weight: 600; letter-spacing: .12em;
       text-transform: uppercase; color: var(--bleu);
     }
     .press-card h4 {
       font-family: 'Unbounded', sans-serif;
-      font-size: .88rem; font-weight: 600; line-height: 1.3;
+      font-size: .88rem; font-weight: 600; line-height: 1.3; color: var(--ink);
     }
-    .press-card .press-date { font-size: .75rem; color: var(--ink-mute); }
+    .press-card .press-excerpt {
+      font-size: .82rem; color: var(--ink-dim); line-height: 1.5; flex: 1;
+    }
+    .press-card .press-date { font-size: .72rem; color: var(--ink-mute); margin-top: .2rem; }
+    .press-card .press-arrow { font-size: .8rem; color: var(--bleu); align-self: flex-end; }
     .press-placeholder {
       border: 1px dashed rgba(244,242,255,.18);
       border-radius: .875rem;
@@ -1011,18 +1016,36 @@
 </section>
 
 
-<!-- MÉDIA & PRESSE -->
+<!-- ON PARLE DE NOUS -->
 <section id="press">
   <div class="container">
     <div class="section-header">
       <p class="eyebrow">Média & Presse</p>
-      <h2>Elles parlent <span class="grad-text">de nous.</span></h2>
-      <p>Retrouvez nos apparitions dans la presse et les médias.</p>
+      <h2>On parle <span class="grad-text">de nous.</span></h2>
+      <p>NWNT dans les médias et l'écosystème tech bordelais.</p>
     </div>
     <div class="press-grid">
-      <div class="press-placeholder">Article à venir</div>
-      <div class="press-placeholder">Article à venir</div>
-      <div class="press-placeholder">Article à venir</div>
+      <a class="press-card" href="#" target="_blank" rel="noopener">
+        <p class="press-source">Échos Judiciaires Girondins</p>
+        <h4>Bordeaux : L'association No Women No Tech plaide pour la place des femmes</h4>
+        <p class="press-excerpt">Créée par Vanessa Portois Wermter et Caroline Ramade, l'association veut faire bouger les lignes et créer à Bordeaux un eldorado pour les femmes dans la tech.</p>
+        <p class="press-date">17 juin 2026</p>
+        <span class="press-arrow">Lire l'article →</span>
+      </a>
+      <a class="press-card" href="#" target="_blank" rel="noopener">
+        <p class="press-source">AirZen Radio</p>
+        <h4>No Women No Tech sur les ondes d'AirZen Radio</h4>
+        <p class="press-excerpt">Vanessa Portois Wermter et Caroline Ramade racontent l'histoire de NWNT : un dîner à 12 femmes à Bordeaux devenu une communauté de 280 professionnelles de la tech.</p>
+        <p class="press-date">2026</p>
+        <span class="press-arrow">Écouter →</span>
+      </a>
+      <a class="press-card" href="https://www.linkedin.com/company/no-women-no-tech/" target="_blank" rel="noopener">
+        <p class="press-source">LinkedIn · Meetup</p>
+        <h4>Tech Leader quand l'IA change les règles du jeu</h4>
+        <p class="press-excerpt">Barbara Teslar, Cathy Larrieu et Elisabeth Mouchy ont réuni la communauté autour d'une table ronde sur l'automatisation, le leadership et les agents IA.</p>
+        <p class="press-date">Novembre 2024 · Now Co-working</p>
+        <span class="press-arrow">Voir le post →</span>
+      </a>
     </div>
   </div>
 </section>
