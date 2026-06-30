@@ -624,7 +624,7 @@
 <script>
   const AIRTABLE_API_KEY = 'patJN0sCwfKRLSA5f.c27b13fd9578f825eb39c597d400ebcae12acc5187b36b6ed031badcc2943da1';
   const AIRTABLE_BASE_ID = 'app03m55dI9kqaXA4';
-  const AIRTABLE_TABLE   = 'Témoignages';
+  const AIRTABLE_TABLE   = 'Témoignage';
 </script>
 
 
@@ -1156,7 +1156,7 @@
       return;
     }
     const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE)}`
-      + `?filterByFormula={Afficher}=TRUE()&maxRecords=9&sort[0][field]=Pr%C3%A9nom&sort[0][direction]=asc`;
+      + `?filterByFormula={Statut+de+publication}=%22Publi%C3%A9%22&maxRecords=9`;
     try {
       const res = await fetch(url, { headers: { Authorization: `Bearer ${AIRTABLE_API_KEY}` } });
       if (!res.ok) throw new Error(`Airtable ${res.status}`);
@@ -1166,10 +1166,10 @@
         return;
       }
       const items = data.records.map(r => ({
-        prenom:     r.fields['Nom complet'] || '',
-        role:       r.fields['Rôle']       || '',
-        entreprise: r.fields['Entreprise'] || '',
-        texte:      r.fields['Texte']      || '',
+        prenom:     (r.fields['Prénom (from Prénom)']?.[0] || '').replace(/^💎\s*/, ''),
+        role:       r.fields['Poste (from Rôle)']?.[0]       || '',
+        entreprise: r.fields['Entreprise (from Entreprise)']?.[0] || '',
+        texte:      r.fields['Contenu du témoignage']      || '',
         photoUrl:   r.fields['Photo']?.[0]?.url || null
       }));
       renderGrid(items, false);
