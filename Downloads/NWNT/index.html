@@ -1156,7 +1156,7 @@
       return;
     }
     const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE)}`
-      + `?filterByFormula={Statut+de+publication}=%22Publi%C3%A9%22&maxRecords=9`;
+      + `?filterByFormula=%7BAfficher%7D%3DTRUE%28%29&maxRecords=9`;
     try {
       const res = await fetch(url, { headers: { Authorization: `Bearer ${AIRTABLE_API_KEY}` } });
       if (!res.ok) throw new Error(`Airtable ${res.status}`);
