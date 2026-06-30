@@ -1166,7 +1166,7 @@
         return;
       }
       const items = data.records.map(r => ({
-        prenom:     r.fields['Prénom']     || '',
+        prenom:     r.fields['Nom complet'] || '',
         role:       r.fields['Rôle']       || '',
         entreprise: r.fields['Entreprise'] || '',
         texte:      r.fields['Texte']      || '',
